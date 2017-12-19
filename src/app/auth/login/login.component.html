@@ -1,4 +1,4 @@
-<p class="text-xs-center">Войдите для работы</p>
+<p class="text-xs-center">For Access Please Log In</p>
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
     <div
             class="form-group"
@@ -9,14 +9,14 @@
                 type="text"
                 class="form-control underlined"
                 id="email"
-                placeholder="Введите ваш email"
+                placeholder="Email"
                 formControlName="email"
         >
         <span
                 class="form-help-text"
                 *ngIf="form.get('email').invalid && form.get('email').touched"
         >
-            <span *ngIf="form.get('email')['errors']['required']">Email must be entered, </span>
+            <span *ngIf="form.get('email')['errors']['required']">Email Required, </span>
             <span *ngIf="form.get('email')['errors']['email']">Email is not Correct</span>
         </span>
     </div>
@@ -24,31 +24,32 @@
             class="form-group"
             [ngClass]="{'has-error': form.get('password').invalid && form.get('password').touched}"
     >
-        <label for="password">Пароль</label>
+        <label for="password">Password</label>
         <input
                 type="password"
                 class="form-control underlined"
                 id="password"
-                placeholder="Пароль"
+                placeholder="Password"
                 formControlName="password"
         >
         <span
                 class="form-help-text"
                 *ngIf="form.get('password').invalid && form.get('password').touched"
         >
-            <span *ngIf="form.get('password')['errors']['required']">Email must be entered, </span>
+            <span *ngIf="form.get('password')['errors']['required']">Password Required, </span>
             <span *ngIf="form.get('password')['errors']['minlength']">
-                Password must be more than {{ form.get('password')['errors']['minlength']['requiredLength'] }} Symbols,
+                Password must be minimum {{ form.get('password')['errors']['minlength']['requiredLength'] }} symbols,
                 You Entered {{ form.get('password')['errors']['minlength']['actualLength'] }} symbols
             </span>
         </span>
     </div>
+    <div class="alert alert-{{message.type}}" *ngIf="message.text">{{ message.text }}</div>
     <div class="form-group">
-        <button type="submit" class="btn btn-block btn-primary" [disabled]="form.invalid">Войти</button>
+        <button type="submit" class="btn btn-block btn-primary" [disabled]="form.invalid">Log In</button>
     </div>
     <div class="form-group">
         <p class="text-muted text-xs-center">
-            Нет аккаунта? <a href="#">Зарегистрироваться!</a>
+            First Time Here? - <a href="#">Registration!</a>
         </p>
     </div>
 </form>
