@@ -9,7 +9,7 @@
                 type="text"
                 class="form-control underlined"
                 id="email"
-                placeholder="Email"
+                placeholder="Enter your Email"
                 formControlName="email"
         >
         <span
@@ -29,7 +29,7 @@
                 type="password"
                 class="form-control underlined"
                 id="password"
-                placeholder="Password"
+                placeholder="Enter your password"
                 formControlName="password"
         >
         <span
@@ -37,7 +37,7 @@
                 *ngIf="form.get('password').invalid && form.get('password').touched"
         >
             <span *ngIf="form.get('password')['errors']['required']">Password Required, </span>
-            <span *ngIf="form.get('password')['errors']['minlength']">
+            <span *ngIf="form.get('password')['errors']['minlength'] && form.get('password')['errors']['minlength']['requiredLength']">
                 Password must be minimum {{ form.get('password')['errors']['minlength']['requiredLength'] }} symbols,
                 You Entered {{ form.get('password')['errors']['minlength']['actualLength'] }} symbols
             </span>
