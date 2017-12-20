@@ -11,6 +11,12 @@
       "password": "123456789",
       "name": "Shako",
       "id": 2
+    },
+    {
+      "email": "asdadas@dasdasds",
+      "password": "fsdfsdfsdf",
+      "name": "fsdfsfsd",
+      "id": 3
     }
   ],
   "bill": {

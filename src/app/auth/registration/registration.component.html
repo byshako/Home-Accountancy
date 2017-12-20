@@ -18,6 +18,7 @@
         >
             <span *ngIf="form.get('email')['errors']['required']">Email Required, </span>
             <span *ngIf="form.get('email')['errors']['email']">Email is not Correct</span>
+            <span *ngIf="form.get('email')['errors']['forbiddenEmail']">User with this mail is already registered</span>
         </span>
     </div>
     <div

@@ -19,7 +19,7 @@ export class RegistrationComponent implements OnInit {
 
     ngOnInit() {
         this.form = new FormGroup({
-            'email': new FormControl(null, [Validators.required, Validators.email]),
+            'email': new FormControl(null, [Validators.required, Validators.email], this.forbiddenEmail.bind(this)),
             'password': new FormControl(null, [Validators.required, Validators.minLength(6)]),
             'name': new FormControl(null, [Validators.required]),
             'agree': new FormControl(false, [Validators.requiredTrue])
@@ -38,4 +38,16 @@ export class RegistrationComponent implements OnInit {
             });
     }
 
+    forbiddenEmail(control: FormControl): Promise<any> {
+        return new Promise((resolve, reject) => {
+            this.usersService.getUserByEmail(control.value)
+                .subscribe((user: User) => {
+                    if(user) {
+                        resolve({forbiddenEmail: true});
+                    } else {
+                        resolve(null);
+                    }
+                });
+        });
+    }
 }
