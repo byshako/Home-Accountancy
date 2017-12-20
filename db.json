@@ -13,10 +13,16 @@
       "id": 2
     },
     {
-      "email": "asdadas@dasdasds",
-      "password": "fsdfsdfsdf",
-      "name": "fsdfsfsd",
+      "email": "shako1@mail.com",
+      "password": "123123313",
+      "name": "Name",
       "id": 3
+    },
+    {
+      "email": "shakoas@mail.com",
+      "password": "dasdasdasdas",
+      "name": "dasd",
+      "id": 4
     }
   ],
   "bill": {
