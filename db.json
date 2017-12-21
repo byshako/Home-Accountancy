@@ -2,27 +2,15 @@
   "users": [
     {
       "id": 1,
-      "email": "test@test.com",
+      "email": "shako@test.com",
       "password": "12345678",
-      "name": "Администратор"
+      "name": "Shako"
     },
     {
-      "email": "shako@mail.com",
-      "password": "123456789",
-      "name": "Shako",
+      "email": "shako@test.com2",
+      "password": "21312213",
+      "name": "21321321321",
       "id": 2
-    },
-    {
-      "email": "shako1@mail.com",
-      "password": "123123313",
-      "name": "Name",
-      "id": 3
-    },
-    {
-      "email": "shakoas@mail.com",
-      "password": "dasdasdasdas",
-      "name": "dasd",
-      "id": 4
     }
   ],
   "bill": {

@@ -1,3 +1,95 @@
-<p>
-  bill-page works!
-</p>
+<div class="title-block">
+  <h3 class="title pull-left">
+    Страница счета <span class="sparkline bar"></span>
+  </h3>
+  <div class="pull-right">
+    <button class="btn-sm btn btn-primary-outline">
+      <i class="fa fa-refresh"></i>
+    </button>
+  </div>
+</div>
+<section class="section">
+  <div class="row">
+    <div class="col col-xs-12 col-sm-12 col-md-6 col-xl-5 stats-col">
+      <div class="card stats" style="height: 291px;">
+        <div class="card-block">
+          <div class="title-block">
+            <h4 class="title">Счет</h4>
+          </div>
+          <div class="row row-sm stats-container">
+            <div class="col-xs-12 stat-col">
+              <div class="stat-icon"> <i class="fa fa-rub"></i> </div>
+              <div class="stat">
+                <div class="value">80.560</div>
+              </div>
+              <progress class="progress stat-progress" value="100" max="100">
+                <div class="progress">
+                  <span class="progress-bar" style="width: 100%;"></span>
+                </div>
+              </progress>
+            </div>
+            <div class="col-xs-12 stat-col">
+              <div class="stat-icon"> <i class="fa fa-euro"></i> </div>
+              <div class="stat">
+                <div class="value">80.560</div>
+              </div>
+              <progress class="progress stat-progress" value="100" max="100">
+                <div class="progress">
+                  <span class="progress-bar" style="width: 100%;"></span>
+                </div>
+              </progress>
+            </div>
+            <div class="col-xs-12 stat-col">
+              <div class="stat-icon"> <i class="fa fa-dollar"></i> </div>
+              <div class="stat">
+                <div class="value">80.560</div>
+              </div>
+              <progress class="progress stat-progress" value="100" max="100">
+                <div class="progress">
+                  <span class="progress-bar" style="width: 100%;"></span>
+                </div>
+              </progress>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col col-xs-12 col-sm-12 col-md-6 col-xl-7 history-col">
+      <div class="card">
+        <div class="card-block">
+          <div class="title-block">
+            <h4 class="title">Курс</h4>
+          </div>
+          <div class="row row-sm stats-container">
+            <table class="table table-hover">
+              <thead>
+              <tr>
+                <th>Валюта</th>
+                <th>Курс</th>
+                <th>Дата</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>доллар</td>
+                <td>24</td>
+                <td>12.12.2017</td>
+              </tr>
+              <tr>
+                <td>евро</td>
+                <td>26</td>
+                <td>12.12.2017</td>
+              </tr>
+              <tr>
+                <td>рубль</td>
+                <td>0.4</td>
+                <td>12.12.2017</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
