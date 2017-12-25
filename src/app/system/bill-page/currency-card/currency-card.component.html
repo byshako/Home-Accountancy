@@ -15,19 +15,14 @@
                     </thead>
                     <tbody>
                     <tr>
-                        <td>доллар</td>
-                        <td>24</td>
-                        <td>12.12.2017</td>
+                        <td>RUB</td>
+                        <td>1</td>
+                        <td>{{ currency.date | hbMoment: 'YYYY-MM-DD' }}</td>
                     </tr>
-                    <tr>
-                        <td>евро</td>
-                        <td>26</td>
-                        <td>12.12.2017</td>
-                    </tr>
-                    <tr>
-                        <td>рубль</td>
-                        <td>0.4</td>
-                        <td>12.12.2017</td>
+                    <tr *ngFor="let c of currencies">
+                        <td>{{ c }}</td>
+                        <td>{{ currency.rates[c] }}</td>
+                        <td>{{ currency.date | hbMoment: 'YYYY-MM-DD' }}</td>
                     </tr>
                     </tbody>
                 </table>
